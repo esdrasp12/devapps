@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DevApps - Precios</title>
+    <link href="https://fonts.googleapis.com/css?family=Allerta|Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet">
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/devapps.css">
+</head>
+<body>
+  <header id="header" class="header background"><!-- header -->
+    <div class="contenedor">
+
+      <figure class="logotipo"><!-- logotipo -->
+          <span>DevApps</span>
+      </figure>
+      <nav class="menu"><!-- menu -->
+        <ul>
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li>
+            <a href="index.html#trabajos">Trabajos</a>
+          </li>
+          <li>
+            <a href="precios.html">Precios</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <section>
+    <div class="contenedor">
+      <table class="tabla">
+      <thead>
+        <tr>
+          <th>Trabajo</th>
+          <th>Precio</th>
+          <th>Descripcion</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Web</td>
+          <td>$1000</td>
+          <td>Pagina web completamente a medida!</td>
+        </tr>
+        <tr>
+          <td>Web Adaptable</td>
+          <td>$1500</td>
+          <td>Pagina web adaptable para dispositivos moviles!</td>
+        </tr>
+        <tr>
+          <td>Web Adaptable y App </td>
+          <td>$2000</td>
+          <td>Pagina Adaptable, y aplicacion para moviles!!</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  </section>
+
+
+  <footer class="footer">
+  <div class="contenedor">
+    <div class="contacto">
+     <span class="devapps">DevApps</span>
+      <a href="tel:+543216496543"><strong>Telefono</strong> <span>3216496543</span>   </a>
+      <a href="mailto:contacto@devapps.com"><strong>E-mail</strong> <span>contacto@devapps.com</span> </a>
+    </div>
+    <form class="formulario">
+      <div class="col1">
+
+        <label for="nombre">Nombre</label>
+        <input type="text" required id="nombre" name="nombre"/>
+        <label for="email">E-mail</label>
+        <input type="email" required id="email" name="email"/>
+        <div class="sexo">
+          <label for="mujer">
+            <input type="radio" id="mujer" name="sexo" checked value="Mujer"> Mujer
+          </label>
+          <label for="hombre">
+            <input type="radio" id="hombre" name="sexo" value="Hombre"> Hombre
+          </label>
+        </div>
+        <div class="intereses">
+          <label for="cotizacion">
+            <input type="checkbox" id="cotizacion" checked name="intereses" value="Cotizacion">Cotización
+          </label>
+          <label for="reclamos">
+            <input type="checkbox" id="reclamos" name="intereses" value="Reclamos">Reclamos
+          </label>
+          <label for="comentarios">
+            <input type="checkbox" id="comentarios" name="intereses" value="Comentarios">Comentarios
+          </label>
+          <label for="otros">
+            <input type="checkbox" id="otros" name="intereses" value="Otros">Otros
+          </label>
+      </div>
+    </div>
+    <div class="col2">
+      <label for="comentarios-textarea">Comentarios</label>
+      <textarea name="comentarios" id="comentarios-textarea" rows="7" cols="30"></textarea>
+      <input type="submit" value="Enviar" class="button">
+    </div>
+    </form>
+  </div>
+  </footer>
+</body>
+</html>

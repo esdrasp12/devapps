@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DevApps tu software!</title>
+    <link href="https://fonts.googleapis.com/css?family=Allerta|Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet">
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/devapps.css">
+</head>
+<body>
+    <section id="portada" class="portada background"><!-- portada -->
+      <header id="header" class="header contenedor"><!-- header -->
+        <figure class="logotipo"><!-- logotipo -->
+            <span>DevApps</span>
+        </figure>
+        <nav class="menu"><!-- menu -->
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="#trabajos">Trabajos</a>
+                </li>
+                <li>
+                    <a href="precios.html">Precios</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+      <div class="contenedor">
+
+        <h1 class="titulo">Esa <span>app</span> que necesitas!</h1><!--titulo-->
+        <h3 class="title-a">Consigue esa herramienta que necesitas</h3><!--resumen-->
+        <a class="button" href="#trabajos">Conoce mas</a><!--boton-->
+      </div>
+    </section>
+    <section id="trabajos" class="guitarras contenedor"><!-- guitarras -->
+        <h2>Nuestros trabajos</h2><!--titulo-->
+        <article class="app"><!--guitarra1 -->
+            <img class="derecha" src="images/responsive.png" alt="Diseño responsive" width="350">
+            <div class="contenedor-app-a">
+              <h3 class="title-b">Diseño responsive</h3>
+              <ol>
+                  <li>Usalo en cualquier dispositivo</li>
+                  <li>Gran usabilidad</li>
+              </ol>
+          </div>
+        </article>
+        <article class="app b"><!--guitarra1 -->
+            <img class="izquierda" src="images/amedida.png" alt="Diseño a medida" width="250">
+            <div class="contenedor-app-b">
+
+
+            <h3 class="title-b">Diseño a medida</h3>
+            <ol>
+                <li>Diseño al gusto del cliente </li>
+                <li>Completamente personalizado</li>
+            </ol>
+          </div>
+        </article>
+
+    </section>
+    <footer class="footer">
+    <div class="contenedor">
+      <div class="contacto">
+       <span class="devapps">DevApps</span>
+        <a href="tel:+543216496543"><strong>Telefono</strong> <span>3216496543</span>   </a>
+        <a href="mailto:contacto@devapps.com"><strong>E-mail</strong> <span>contacto@devapps.com</span> </a>
+      </div>
+      <form class="formulario">
+        <div class="col1">
+
+          <label for="nombre">Nombre</label>
+          <input type="text" required id="nombre" name="nombre"/>
+          <label for="email">E-mail</label>
+          <input type="email" required id="email" name="email"/>
+          <div class="sexo">
+            <label for="mujer">
+              <input type="radio" id="mujer" name="sexo" checked value="Mujer"> Mujer
+            </label>
+            <label for="hombre">
+              <input type="radio" id="hombre" name="sexo" value="Hombre"> Hombre
+            </label>
+          </div>
+          <div class="intereses">
+            <label for="cotizacion">
+              <input type="checkbox" id="cotizacion" checked name="intereses" value="Cotizacion">Cotización
+            </label>
+            <label for="reclamos">
+              <input type="checkbox" id="reclamos" name="intereses" value="Reclamos">Reclamos
+            </label>
+            <label for="comentarios">
+              <input type="checkbox" id="comentarios" name="intereses" value="Comentarios">Comentarios
+            </label>
+            <label for="otros">
+              <input type="checkbox" id="otros" name="intereses" value="Otros">Otros
+            </label>
+        </div>
+      </div>
+      <div class="col2">
+        <label for="comentarios-textarea">Comentarios</label>
+        <textarea name="comentarios" id="comentarios-textarea" rows="7" cols="30"></textarea>
+        <input type="submit" value="Enviar" class="button">
+      </div>
+      </form>
+    </div>
+    </footer>
+</body>
+</html>
