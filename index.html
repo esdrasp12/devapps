@@ -4,6 +4,7 @@
     <title>DevApps tu software!</title>
     <link href="https://fonts.googleapis.com/css?family=Allerta|Montserrat" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet">
+    <meta name="viewport"content="width=device-width,initial-scale=1,user-scalable=no"/>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="css/devapps.css">
 </head>
@@ -13,7 +14,8 @@
         <figure class="logotipo"><!-- logotipo -->
             <span>DevApps</span>
         </figure>
-        <nav class="menu"><!-- menu -->
+        <span class="burger-button icon-menu" id="burger-button"></span>
+        <nav class="menu" id="menu"><!-- menu -->
             <ul>
                 <li>
                     <a href="index.html">Home</a>
@@ -37,7 +39,7 @@
     <section id="trabajos" class="guitarras contenedor"><!-- guitarras -->
         <h2>Nuestros trabajos</h2><!--titulo-->
         <article class="app"><!--guitarra1 -->
-            <img class="derecha" src="images/responsive.png" alt="Diseño responsive" width="350">
+            <img class="derecha" data-src="images/responsive.png" alt="Diseño responsive" width="350">
             <div class="contenedor-app-a">
               <h3 class="title-b">Diseño responsive</h3>
               <ol>
@@ -47,7 +49,7 @@
           </div>
         </article>
         <article class="app b"><!--guitarra1 -->
-            <img class="izquierda" src="images/amedida.png" alt="Diseño a medida" width="250">
+            <img class="izquierda" data-src="images/amedida.png" alt="Diseño a medida" width="250">
             <div class="contenedor-app-b">
 
 
@@ -105,5 +107,50 @@
       </form>
     </div>
     </footer>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/blazy/1.8.2/blazy.min.js">
+
+    </script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js">
+
+    </script>
+    <script type="text/javascript">
+    var consulta = window.matchMedia('(max-width:500px)');
+    consulta.addListener(mediaQuery);
+
+    var $burgerButton = document.getElementById('burger-button');
+    var $menu = document.getElementById('menu');
+
+    function mediaQuery(){
+      if (consulta.matches) {
+        console.log("Si perrirri");
+        $burgerButton.addEventListener('touchstart',toggleMenu);
+
+      } else{
+      $burgerButton.removeEventListener('touchstart',toggleMenu);
+        console.log("No perrirri");
+      }
+    }
+    function toggleMenu(){
+      $menu.classList.toggle('active');
+    };
+    function showMenu(){
+      $menu.classList.add('active');
+    };
+    function hideMenu(){
+      $menu.classList.remove('active');
+    };
+    mediaQuery();
+
+    //lazy loading
+    var bLazy = new Blazy({
+        selector: 'img' // all images
+    });
+
+    //Gestos touch
+    var $body = document.body;
+    var gestos = new Hammer($body);
+    gestos.on('swipeleft',hideMenu);
+    gestos.on('swiperight',showMenu);
+    </script>
 </body>
 </html>
